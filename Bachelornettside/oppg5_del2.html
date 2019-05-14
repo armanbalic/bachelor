@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>DEL 2 | Oppgave 5</title>
+</head>
+<body>
+	<header>
+		<h1>Oppgave 5 - Kompass</h1>
+		
+	</header>
+
+	<section>
+		<h3>Beskrivelse</h3>
+		<p>
+			I denne oppgaven så skal vi bruke Micro:Bit til å lage et enkelt kompass.
+			Her vil du ha bruk for Input og Basic bibliotekene i Micro:Bit, i tillegg til
+			dette så vil dere også få bruk for Else, else if og else tilstandene. For at 
+			kompasset skal hele tiden oppdatere seg når vi bruker det, så vil dere også
+			få nytte for å ta i bruk forever funksjonen som ligger i Basic delen i Micro:Bit.
+			Husk også å bruke variabler for å definere input.compassHeading() funksjonen til 
+			Micro:Bit. Med andre ord, så kan det være fint å starte med å sette inn basic.forever
+			funksjonen først, dermed definere variabelen "degrees" som input.compassHeading();.
+			Videre under i beskrivelsen så skal vi forklare hvordan vi skal bestemme hvilke verdier
+			som skal bestemme nord, øst, sør og vest. Vi ønsker derfor at dere skal starte med denne
+			koden:
+		</p>
+		<img src="./img/kompass_1.png">
+		<h5>Retninger</h5>
+		<p>
+			For å bestemme retningen for nord, så vil det være gunstig å sette tilstanden til å være degrees < 45 eller
+			(bruk eller operatoren || her i tilstanden) degrees > 315. 
+			Får å bestemme øst så setter vi degrees til å være mindre enn 135.
+			For å bestemme sør så setter vi at degrees skal være mindre enn 225.
+			Hvis ingen av disse tilstandene stemmer, så skal kompasset peke mot vest.
+			I Micro:Bit så ønsker vi at hver retning skal vises i LED-lysene, her kan dere da
+			benytte dere av basic.showString funksjonen og bare første bokstav skal vises i lysene.
+			For eksempel slik:
+		</p>
+		<img src="./img/kompass_2.png">
+		<p>Her viser Micro:Bit retningen øst (på engelsk da east).</p>
+		<p>
+			Da skal dere være klare for å lage et kompass i Micro:Bit. Lykke til!
+		</p>
+	</section>
+
+	<section>
+		<h3>Oppgave</h3>
+			<nav>
+				<ol>
+					<li>Lag et kompass</li>
+				</ol>
+			</nav>
+	</section>
+	
+	<section>
+		<h4>Eksempelvideo</h4>
+		<video width="320" height="240" controls>
+			<source src="del2_kompass.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+		</video>
+	</section>
+	
+	<footer>
+		<nav>
+			<li><a href="oppg4_del2.html">Forrige Oppgave</a></li>
+			<li><a href="index.html">Hjem</a></li>
+			<li><a href="./løsninger/kompass.txt">Løsningsforslag</a></li>
+		</nav>
+	</footer>
+</body>
+</html>
