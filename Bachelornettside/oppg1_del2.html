@@ -36,10 +36,30 @@
 		</p>
 		<p>
 			Etter at vi har bestemt variabler for programmet, så skal vi begynne å sette inn if og else tester.
-			Inne i forever funksjonen, så skal vi ha en if test for hvis låsen er låst. Hvis vi forsøker å låse
-			opp låsen da ved å trykke A+B uten å ha forsøkt å taste inn noen koder i låsen, så skal det dukke opp
-			et symbol i LED lysene som forteller oss at koden er låst. Vi setter inn en basic.pause(500) for å
-			gi programmet tid til å sjekke at koden som dere har valgt selv er riktig for å låse opp låsen.
+			Inne i forever funksjonen, så skal vi ha en if test for hvis låsen er låst. Hvis låsen er låst
+			så skal det dukke opp et symbol indikerer låsen prøver å låse opp, men den endrer seg ikke hvis
+			vi prøver å låse den opp. Vil det være en if test inn i en if test. I den samme if testen som sier
+			at låsen er låst, så skal vi ha enda en if test som sier at hvis knapp A og knapp B holder på de
+			riktige verdiene, så er ikke låsen låst, men ellers så skal den være det.
+		</p>
+		<p>
+			Etter dette er gjort så skal vi benytte oss av else if-tester. I den første else if testen så skal
+			vi fortelle programmet at når knapp B trykkes, så skal variabelen touchB øke med 1. Det skal i tillegg
+			vises et unikt symbol i LED lysene når vi trykker på B knappen. Vi skal også lage enda en else if-test
+			for knapp A med samme funksjon som nevnt, hvor touchA skal øke med 1 og det skal også lages et unikt tegn
+			her for at knapp A har blitt trykket.
+		</p>
+		<p>
+			Nå som vi har laget else if testene i den første if testen som vi laget, så kan vi starte på else testene.
+			Her skal vi legge inn Pin funksjonene som vi har i Micro:Bit, og de vil se slik ut:
+		</p>
+		<img src="./img/lås_2.png">
+		<p>
+			Til slutt så lager vi en else test til den første if testen som tester om låsen er låst. Denne skal si
+			ellers hvis låsen ikke er låst, så skal den vise et sjekk-merke i LED-lysene.
+		</p>
+		<p>
+			Da er dere klare for å gjøre et forsøk på lås oppgaven! Løsningsforslag finnes nederst i siden. Lykke til!
 		</p>
 	</section>
 
@@ -62,6 +82,7 @@
 		<nav>
 			<li><a href="oppg2_del2.html">Neste Oppgave</a></li>
 			<li><a href="index.html">Hjem</a></li>
+			<li><a href="./løsninger/lås.txt>Løsningsforslag</a></li>
 		</nav>
 	</footer>
 </body>
