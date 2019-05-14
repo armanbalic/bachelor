@@ -12,7 +12,34 @@
 	<section>
 		<h3>Beskrivelse</h3>
 		<p>
-			I denne oppgaven så skal vi programmere en enkel kodelås i Micro:Bit. 
+			I denne oppgaven så skal vi programmere en enkel kodelås i Micro:Bit. Vi skal også benytte oss av 
+			en del andre utstyr ved siden av Micro:Biten, det vi da trenger er:
+		</p>
+		<ul>
+			<li>1 Buzzer</li>
+			<li>4 krokodille kabler</li>
+			<li>1 kobber tape</li>
+			<li>1 Sticky back velcro</li>
+		</ul>
+		<p>
+			I første omgang så skal vi bare konsentrere oss om å programmere låsen først. Hvordan vi setter
+			opp det andre skal vi ta i Del 3. Når det gjelder programmeringen så kommer vi til å benytte oss av
+			variabler, forever funksjonen i Micro:Bit, if og else tester, pause funksjonen i Micro:Bit, og blant
+			annet showLeds og showNumber. Vi kommer også til å benytte oss av Pins delen i Micro:Bit, blant annet
+			DigitalPin og TouchPin. Pins delen ser slik ut:
+		</p>
+		<img src="./img/lås_1.png">
+		<p>
+			Siden vi kommer til å benytte oss av de samme variablene flere ganger i koden, så kommer vi også
+			til å bruke boolske operatorer (true/false). Til å begynne med så kommer vi til ha variabler for
+			cipher1, cipher2, touchA, touchB og locked. 
+		</p>
+		<p>
+			Etter at vi har bestemt variabler for programmet, så skal vi begynne å sette inn if og else tester.
+			Inne i forever funksjonen, så skal vi ha en if test for hvis låsen er låst. Hvis vi forsøker å låse
+			opp låsen da ved å trykke A+B uten å ha forsøkt å taste inn noen koder i låsen, så skal det dukke opp
+			et symbol i LED lysene som forteller oss at koden er låst. Vi setter inn en basic.pause(500) for å
+			gi programmet tid til å sjekke at koden som dere har valgt selv er riktig for å låse opp låsen.
 		</p>
 	</section>
 
