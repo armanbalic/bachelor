@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>DEL 2 | Lås</title>
+</head>
+<body>
+	<header>
+		<h1>Lås</h1>
+	</header>
+
+	<section>
+		<h3>Beskrivelse</h3>
+		<p>
+			I denne oppgaven så skal vi programmere en enkel kodelås i Micro:Bit. Vi skal også benytte oss av 
+			en del andre utstyr ved siden av Micro:Biten, det vi da trenger er:
+		</p>
+		<ul>
+			<li>1 Buzzer</li>
+			<li>4 krokodille kabler</li>
+			<li>1 kobber tape</li>
+			<li>1 Sticky back velcro</li>
+		</ul>
+		<p>
+			I første omgang så skal vi bare konsentrere oss om å programmere låsen først. Hvordan vi setter
+			opp det andre skal vi ta i Del 3. Når det gjelder programmeringen så kommer vi til å benytte oss av
+			variabler, forever funksjonen i Micro:Bit, if og else tester, pause funksjonen i Micro:Bit, og blant
+			annet showLeds og showNumber. Vi kommer også til å benytte oss av Pins delen i Micro:Bit, blant annet
+			DigitalPin og TouchPin. Pins delen ser slik ut:
+		</p>
+		<img src="./img/lås_1.png">
+		<p>
+			Siden vi kommer til å benytte oss av de samme variablene flere ganger i koden, så kommer vi også
+			til å bruke boolske operatorer (true/false). Til å begynne med så kommer vi til ha variabler for
+			cipher1, cipher2, touchA, touchB og locked. 
+		</p>
+		<p>
+			Etter at vi har bestemt variabler for programmet, så skal vi begynne å sette inn if og else tester.
+			Inne i forever funksjonen, så skal vi ha en if test for hvis låsen er låst. Hvis låsen er låst
+			så skal det dukke opp et symbol indikerer låsen prøver å låse opp, men den endrer seg ikke hvis
+			vi prøver å låse den opp. Vil det være en if test inn i en if test. I den samme if testen som sier
+			at låsen er låst, så skal vi ha enda en if test som sier at hvis knapp A og knapp B holder på de
+			riktige verdiene, så er ikke låsen låst, men ellers så skal den være det.
+		</p>
+		<p>
+			Etter dette er gjort så skal vi benytte oss av else if-tester. I den første else if testen så skal
+			vi fortelle programmet at når knapp B trykkes, så skal variabelen touchB øke med 1. Det skal i tillegg
+			vises et unikt symbol i LED lysene når vi trykker på B knappen. Vi skal også lage enda en else if-test
+			for knapp A med samme funksjon som nevnt, hvor touchA skal øke med 1 og det skal også lages et unikt tegn
+			her for at knapp A har blitt trykket.
+		</p>
+		<p>
+			Nå som vi har laget else if testene i den første if testen som vi laget, så kan vi starte på else testene.
+			Her skal vi legge inn Pin funksjonene som vi har i Micro:Bit, og de vil se slik ut:
+		</p>
+		<img src="./img/lås_2.png">
+		<p>
+			Til slutt så lager vi en else test til den første if testen som tester om låsen er låst. Denne skal si
+			ellers hvis låsen ikke er låst, så skal den vise et sjekk-merke i LED-lysene.
+		</p>
+		<p>
+			Da er dere klare for å gjøre et forsøk på lås oppgaven! Løsningsforslag finnes nederst i siden. Lykke til!
+		</p>
+	</section>
+
+	
+	<section>
+		<h3>Oppgave</h3>
+			<nav>
+				<ol>
+					<li>Lag en lås som bruker tall/bokstaver til å låses opp</li>
+				</ol>
+			</nav>
+	</section>
+	
+	<section>
+		<h4>Eksempelvideo</h4>
+		<p>Coming soon......</p>
+	</section>
+	
+	<footer>
+		<nav>
+			<li><a href="oppg3_del2.html">Neste Oppgave</a></li>
+			<li><a href="index.html">Hjem</a></li>
+			<li><a href="./løsninger/lås.txt">Løsningsforslag</a></li>
+		</nav>
+	</footer>
+</body>
+</html>
