@@ -1,0 +1,188 @@
+let Cipher2 = 0
+
+let TouchA = 0
+
+let TouchB = 0
+
+let Cipher1 = 0
+
+let Locked = false
+
+Locked = true
+
+Cipher1 = 1
+
+Cipher2 = 2
+
+TouchA = 0
+
+TouchB = 0
+
+
+basic.forever(() => {
+    
+	if (Locked == true) {
+        
+		if (input.buttonIsPressed(Button.AB)) {
+            
+			basic.showLeds(`
+                
+			. . . . .
+                
+			# # # . #
+                
+			# . # . #
+                
+			# . # # #
+                
+			. . . . .
+                
+			`)
+            
+			basic.pause(500)
+            
+			if (TouchA == Cipher1 && TouchB == Cipher2) {
+                
+				Locked = false
+            
+			} else {
+                
+				Locked = true
+            
+			}
+            
+			TouchA = 0
+            
+			TouchB = 0
+        
+		} else if (input.buttonIsPressed(Button.B)) {
+            
+			TouchB += 1
+            
+			basic.showLeds(`
+                
+			. # . # .
+                
+			. # . # .
+                
+			. # . # .
+                
+			. # . # .
+                
+			. # . # .
+                
+			`)
+            
+			basic.pause(100)
+            
+			basic.showNumber(TouchB)
+            
+			basic.pause(500)
+        
+		} else if (input.buttonIsPressed(Button.A)) {
+            
+			TouchA += 1
+            
+			basic.showLeds(`
+                
+			. . # . .
+                
+			. . # . .
+                
+			. . # . .
+                
+			. . # . .
+                
+			. . # . .
+                
+			`)
+            
+			basic.pause(100)
+            
+			basic.showNumber(TouchA)
+            
+			basic.pause(500)
+        
+		} else {
+            
+			if (input.pinIsPressed(TouchPin.P0)) {
+                
+				pins.digitalWritePin(DigitalPin.P1, 0)
+                
+				basic.showLeds(`
+                    
+				. . . . .
+                    
+				. . . . .
+                    
+				# . . . #
+                    
+				# . . . #
+                    
+				. # # # .
+                    
+				`)
+            
+		} else {
+                
+			if (Locked == true) {
+                    
+				pins.digitalWritePin(DigitalPin.P1, 1)
+                    
+				basic.showLeds(`
+                        
+				. # # # .
+                        
+				# . . . #
+                        
+				# . # . #
+                        
+				# . . . #
+                        
+				. # # # .
+                        
+				`)
+                    
+				basic.pause(100)
+                    
+				basic.showLeds(`
+                        
+				. # # # .
+                        
+				# . # . #
+                        
+				# # # # #
+                        
+				# . # . #
+                        
+				. # # # .
+                        
+				`)
+                    
+				basic.pause(100)
+                
+			}
+            
+		}
+        
+	}
+    
+} else {
+        
+	basic.showLeds(`
+            
+	. . . . .
+            
+	. . . . #
+            
+	. . . # .
+            
+	# . # . .
+            
+	. # . . .
+            
+	`)
+    
+	}
+
+})

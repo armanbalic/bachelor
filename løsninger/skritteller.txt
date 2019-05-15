@@ -1,0 +1,34 @@
+Oppgave 1
+
+let steps = 0;
+
+
+
+
+input.onShake(function () {
+    
+	steps += 1;
+
+})
+
+
+
+input.onButtonPressed(Button.A, function () {
+    
+	basic.showNumber(steps);
+
+})
+
+
+
+input.onButtonPressed(Button.B, function () {
+    
+	control.reset();
+
+})
+
+
+
+
+
+
